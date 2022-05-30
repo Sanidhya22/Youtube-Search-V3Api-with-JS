@@ -9,7 +9,7 @@ Button1.addEventListener("click", () => {
 
 async function searchData(query,maxResuts){
     try {
-        const response = await fetch ("https://www.googleapis.com/youtube/v3/search?key=AIzaSyCKP1qV9BJ00fyXWjNmkO2uH_InlZjkDOc&type=video&part=snippet&maxResults=15&q="+query+"")
+        const response = await fetch ("https://www.googleapis.com/youtube/v3/search?key=<your api key >&type=video&part=snippet&maxResults=15&q="+query+"")
         let data = await response.json()
         console.log(data)
         addvideos(data)
